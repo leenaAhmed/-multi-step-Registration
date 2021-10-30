@@ -38,4 +38,7 @@ function updatePrograssPar() {
       prostep.classList.remove("prograss-step-active");
     }
   });
+  const prograssStepactive = document.querySelectorAll(".prograss-step-active");
+  Prograss.style.width =
+    ((prograssStepactive.length - 1) / (prograssStep.length - 1)) * 100 + "%";
 }
