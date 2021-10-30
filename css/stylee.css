@@ -84,7 +84,19 @@ input {
 /* forms */
 .formStep {
   display: none;
+  animation: animate 0.7s;
 }
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
 .form-step-active {
   display: block;
 }
