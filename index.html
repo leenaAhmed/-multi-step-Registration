@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/stylee.css" />
+    <title>multi-step registration</title>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <h1 class="center">Registration</h1>
+      <!-- prograss -->
+      <div class="prograsbar">
+        <div class="progress" id="progress"></div>
+        <div
+          class="prograss-step prograss-step-active"
+          data-title="intro"
+        ></div>
+        <div class="prograss-step" data-title="phone"></div>
+        <div class="prograss-step" data-title="data"></div>
+        <div class="prograss-step" data-title="password"></div>
+      </div>
+      <!-- steps -->
+      <div class="formStep form-step-active">
+        <div class="input-group">
+          <label for="username" class="">Username</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div class="input-group">
+          <label for="Position" class="">Position</label>
+          <input type="text" name="Position" id="Position" />
+        </div>
+        <div class="">
+          <a href="#" class="btn btn-next ml-auto width-50">Next</a>
+        </div>
+      </div>
+      <div class="formStep">
+        <div class="input-group">
+          <label for="phone">PhoneNumber </label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="formStep">
+        <div class="input-group">
+          <label for="dob">Data of birth</label>
+          <input type="date" name="dob" id="dob" />
+        </div>
+        <div class="input-group">
+          <label for="id">ID Number</label>
+          <input type="number" name="id" id="id" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="formStep">
+        <div class="input-group">
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm-password</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+          />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" name="submit" id="submit" class="btn" />
+        </div>
+      </div>
+    </form>
+    <script src="js/main.js"></script>
+  </body>
+</html>

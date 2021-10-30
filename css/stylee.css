@@ -1,0 +1,119 @@
+:root {
+  --primary-color: rgb(18, 136, 204);
+}
+/* global styling  */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.width-50 {
+  width: 50%;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.center {
+  text-align: center;
+}
+label {
+  display: block;
+  margin: 0.5em;
+}
+input {
+  display: block;
+  width: 100%;
+  border-radius: 0.23rem;
+  border: 1px solid #ccc;
+  padding: 0.73em;
+}
+/* prograss bar */
+.prograsbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 3rem;
+}
+.prograsbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: rgb(224, 212, 212);
+  z-index: -1;
+}
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+.prograss-step {
+  background-color: rgb(224, 212, 212);
+  width: 2.18rem;
+  height: 2.18rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prograss-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+.prograss-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% - 0.1rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+.prograss-step-active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/* forms */
+.formStep {
+  display: none;
+}
+.form-step-active {
+  display: block;
+}
+form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.37rem;
+  padding: 1.5rem;
+}
+.input-group {
+  margin: 2rem 0;
+}
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.15rem;
+  transition: all 0.4s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
